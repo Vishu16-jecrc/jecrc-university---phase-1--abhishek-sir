@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int globalInput = 100;
+int main(){
+    int userInput;
+    float result;
+    
+    cin>>userInput;
+    result = (double)globalInput / userInput;
+    
+    cout <<result<<endl;
+    return 0;
+}
