@@ -1,0 +1,22 @@
+//Age Group Specifer
+
+#include<iostream>
+using namespace std;
+int main(){
+    int age;
+    
+    cout<<"Enter your age";
+    cin>>age;
+    
+    if(age<18){
+        cout<<"Your Kid";
+    }
+    
+    else if(age>18 && age<50){
+        cout<<"your are young";
+    }
+    
+    else{
+        cout<<"Sorry Ur are oldies";
+    }
+}
