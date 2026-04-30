@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cctype>
+using namespace std;
+
+int main(){
+    char ch;
+    
+    cout << "Enter a character: ";
+    cin >> ch;
+    
+    if (isupper(ch)) {
+        cout << "This is uppercase";
+    }
+    else if (islower(ch)) {
+        cout << "This is lowercase";
+    }
+    else {
+        cout << "Not an alphabet";
+    }
+    
+    return 0;
+}
