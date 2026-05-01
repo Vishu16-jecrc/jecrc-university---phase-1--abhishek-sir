@@ -1,0 +1,23 @@
+// smart home lightning system
+
+#include<iostream>
+using namespace std;
+int main(){
+   string dayOrNight;
+   bool motionDetected;
+   
+   cout<<"Is it day or night";
+   cin>>dayOrNight;
+   cout<<"Is motion Detected? (1 for yes , 0 For no)";
+   cin>> motionDetected;
+   
+   if(dayOrNight == "Night" || dayOrNight=="night"){
+       if(motionDetected){
+           cout<<"Turn on the led Light with 100% brightness";
+       }else{
+            cout<<"Turn on the led Light with 10% brightness";
+       }
+   }else{
+       cout<<"turn off the light";
+   }
+}
