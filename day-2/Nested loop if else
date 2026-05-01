@@ -1,0 +1,26 @@
+// Problem1 -- nested if else condition
+// to verify user
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int age;
+    cin>>age;
+    
+    if(age>=18){
+        if(age>=100){
+            cout<<"eligible for vote(but we are super senior citizer";
+        } else{
+            cout<<"eligible for vote";
+        }
+    } else{
+        if(age<0){
+            cout<<"enter a valid age number";
+        } else{
+            cout << "not eligible for vote";
+        }
+    }
+    
+    return 0;
+}
