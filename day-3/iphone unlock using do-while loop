@@ -1,0 +1,17 @@
+//iPhone Unlock
+//try to unlock the phone until we get the correct password
+
+#include<iostream>
+using namespace std;
+int main(){
+    int password;
+    
+    do{
+        cout<<"Enter the password";
+        cin>>password;
+    }
+    while(password !=1234);
+    cout<< "phone unlocked!...";
+    
+    return 0 ;
+}
