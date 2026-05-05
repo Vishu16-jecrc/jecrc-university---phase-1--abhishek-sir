@@ -1,0 +1,14 @@
+//problem --4
+//types of function
+//4.1 no argumnet and no return types
+
+#include<iostream>
+using namespace std;
+void doorBell(){
+    cout<<"ting tong";
+}
+
+int main(){
+    doorBell;
+    return 0;
+}
