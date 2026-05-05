@@ -1,0 +1,23 @@
+//problem -- 2
+//Make a function with argument and return type
+
+#include<iostream>
+using namespace std;
+
+
+
+
+int area(int a,int b){
+    return a*b;
+} 
+int main(){
+    int length;
+    int width ;
+    cin>>length;
+    cin>>width;
+    // int areaOfRectangle = area(length,width);
+    area(length,width);
+    
+    cout<<area;
+    
+}
