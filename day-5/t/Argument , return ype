@@ -1,0 +1,12 @@
+
+#include<iostream>
+using namespace std;
+
+int currencyConversion(int ammountInUSD){
+    return ammountInUSD / 100;
+}
+
+int main(){
+    cout<<currencyConversion(100);
+    return 0;
+}
