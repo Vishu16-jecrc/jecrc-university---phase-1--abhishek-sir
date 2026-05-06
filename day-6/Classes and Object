@@ -1,0 +1,27 @@
+//Problem -- 5
+//classes & Objects
+
+#include<iostream>
+using namespace std;
+
+class Student{
+    public:
+    string name;
+    int age;
+void introduce(){
+    cout<<"Hi there ,this person name is"<<name<<"and his age is"<<age<<"\n";
+ }
+};
+
+
+int main(){
+    Student s1;
+    s1.name = " vishu_SoP ";
+    s1.age = 25;
+    s1.introduce();
+    
+    Student s2;
+    s2.name =  " HULA ";
+    s2.age = 21;
+    s2.introduce();
+}
