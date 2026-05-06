@@ -1,0 +1,32 @@
+// call by value -- photocopy
+// call by reference -- original copy(address)
+
+#include<iostream>
+using namespace std;
+
+
+
+//gonna update the value no matter what was earlier
+void updatebyValue(int a){
+    a = 500;
+}
+
+
+//not gonna change the value and keep it exact..
+void updatebyRefrence(int &a){
+    a = 500;
+}
+
+
+int main(){
+
+    int original = 100;
+
+    updatebyValue(original);
+    cout << original << endl;
+
+    updatebyRefrence(original);
+    cout << original;
+
+    return 0;
+}
