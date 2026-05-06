@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int paisa(int *c, int *p){
+    return (*c) * (*p);
+}
+
+int main(){
+
+    int coffee = 5;
+    int price = 100;
+
+    int totalPaise = paisa(&coffee, &price);
+
+    cout << totalPaise;
+
+    return 0;
+}
