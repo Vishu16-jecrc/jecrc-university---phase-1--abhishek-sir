@@ -1,0 +1,31 @@
+//problem --2 
+//Contructors
+//types -- 2.1 -- Default
+//      -- 2.2 -- Parameterized
+//      -- 2.3 -- copy
+
+
+#include<iostream>
+using namespace std;
+
+class wifiConnection{
+public:
+    string networkName;
+    string password;
+    
+    wifiConnection(){
+        networkName = "ACTfibre";
+        password = "BJP wons";
+    }
+    
+public :
+void showDetails(){
+    cout<< "Network name is "<<networkName << "and its password is "<<password;
+  }
+};
+
+
+int main(){
+    wifiConnection obj1;
+    obj1.showDetails();
+}
