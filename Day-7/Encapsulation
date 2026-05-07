@@ -1,0 +1,41 @@
+//problem --3
+//pillar of OOPs
+//Encapsulation
+//Encapsulation means we are binding the data into a single unit (Funcitons , Data ,methods)
+//into a single unit called class and making some restrcitions on this class members
+//Data Security
+//Controlled access over my Data
+//code maintainability
+
+
+#include<iostream>
+using namespace std;
+class BankAccount{
+private:
+    int balance;
+
+public:
+    void setBalance(int amount){
+        if(amount >= 0){
+            balance = amount;
+        }
+        else{
+            cout << "Enter a valid number..." << endl;
+        }
+    }
+
+    int getBalance(){
+        return balance;
+    }
+};
+
+int main(){
+
+    BankAccount obj1;
+
+    obj1.setBalance(5000);
+
+    cout << "Balance is: " << obj1.getBalance();
+
+    return 0;
+}
