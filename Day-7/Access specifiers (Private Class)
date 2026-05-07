@@ -1,0 +1,30 @@
+//Access Specifiers
+//7..2 private 
+
+#include<iostream>
+using namespace std;
+
+class Pin{
+private:
+    int password = 830705;
+
+public:
+    int getPassword(){
+        return password;
+    }
+};
+
+class ShowOfPin{
+public:
+    void showPassword(){
+        Pin obj;
+        cout << "Hey Buddy, the pin is " << obj.getPassword();
+    }
+};
+
+int main(){
+    ShowOfPin obj1;
+    obj1.showPassword();
+
+    return 0;
+}
