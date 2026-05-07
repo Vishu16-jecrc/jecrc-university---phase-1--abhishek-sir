@@ -1,0 +1,20 @@
+// problem --1
+// Access Specifiers
+//7.2 -- public
+#include<iostream>
+using namespace std;
+
+class BankAccount{
+  private :
+  int Balance = 5000;
+  
+  public:
+  void showBalance(){
+      cout<<"Balance in your account is: "<<Balance;
+  }
+};
+
+int main(){
+    BankAccount myaccount;
+    myaccount.showBalance();
+}
