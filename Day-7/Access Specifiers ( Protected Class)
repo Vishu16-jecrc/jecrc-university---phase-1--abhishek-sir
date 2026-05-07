@@ -1,0 +1,23 @@
+// problem --1
+// Access Specifiers
+//7.2 -- protected
+#include<iostream>
+using namespace std;
+
+class Parent{
+protected:
+  int secretCode = 1234;
+  
+ };
+
+class child : public Parent{
+public:
+    void accessOfSecretCode(){
+        cout << "secretcode of the locker is "<<secretCode;
+    }
+};
+
+int main(){
+    child obj1;
+    obj1.accessOfSecretCode();
+}
