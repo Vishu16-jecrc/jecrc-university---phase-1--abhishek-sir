@@ -1,0 +1,296 @@
+//inheritance - when a child class parsing or the behaviour and property of their parent (papa/mummy)class
+// types of inheritance -- 1. single level inheritance
+//                      -- 2. Multilevel inheritance
+//                      -- 3. Multiple inheritance
+//                      -- 4. hierarchical inheritance
+//                      -- 5. Hybrid inheritance
+
+#include<iostream>
+using namespace std;
+
+
+
+//Problem -1 
+// inheritance
+//1.1 -- single inheritance
+class Vehicle{
+public:
+    void start(){
+        cout<< "Vehicle Start"<< "\n";
+    }
+    
+};
+
+
+class Car : public Vehicle{
+public:
+    void drive(){
+        cout<<"Car is running "<< "\n";
+    }
+};
+int main(){
+    Car obj1;
+    obj1.drive();
+    obj1.start();
+}
+
+//1.2 -- Multilevel inheritance
+
+
+class Vehicle{
+public:
+    void start(){
+        cout<< "Vehicle Start"<< "\n";
+    }
+    
+};
+
+
+class Car : public Vehicle{
+public:
+    void drive(){
+        cout<<"Car is running "<< "\n";
+    }
+};
+
+
+class SpeedoMeter : public Car{
+public:
+void speed(){
+    cout<<"Car is running at 60km/h";
+}
+};
+
+
+int main(){
+    SpeedoMeter obj1;
+    obj1.drive();
+    obj1.start();
+    obj1.speed();
+}
+
+
+// 1.3  hierarchical inheritance
+
+class Vehicle{
+public:
+    void start(){
+        cout<< "Vehicle Start"<< "\n";
+    }
+    
+};
+
+
+class Car : public Vehicle{
+public:
+    void car(){
+        cout<<"Car is running "<< "\n";
+    }
+};
+
+
+class Bike : public Vehicle{
+public:
+void bike(){
+    cout<<"Bike is running ";
+}
+};
+
+
+int main(){
+    Car obj1;
+    obj1.start();
+    obj1.car();
+    
+    
+    Bike obj2;
+    obj2.start();
+    obj2.bike();
+}
+
+// 1.4 Multilevel inheritance
+
+class Parent1 {
+public:
+    void giveMeMoney(){
+        cout<< "Mummy ji pasise do mujhe Ganja funkna hai"<<"\n";
+        
+    }
+};
+
+class Parent2{
+public:
+    void giveMeMoney(){
+        cout<<"Papa mujhe pasia do old monk lekr ata hu dono milkr piyenge";
+    }
+};
+
+class Child:public Parent1 , public Parent2{
+    
+};
+
+int main(){
+    Child obj1;
+    obj1.Parent1::giveMeMoney();
+    obj1.Parent2::giveMeMoney();
+}
+
+
+
+
+// 1.5 Hybrid inheritance ; Diamond Problem
+
+class A{
+ public: 
+    void print(){
+        cout<<"BJP Wons";
+    }
+};
+
+class B: virtual public A{
+    
+};
+
+class C: virtual public A{
+    
+};
+
+class D:public B ,public C{
+    
+};
+
+int main(){
+    D obj1;
+    obj1.print();
+}
+
+
+//problem -- 2
+//Polymorphism
+//Polymorphism means one name but many forms
+//same function behaves differently depending on the type of the object it called
+//two types -- 1.1 Compile time Polymorphism
+//             1.2 Runtime time Polymorphism
+
+// Funtion overloading -- Same fxn name , different parameters ; Faster Execution
+// Runtime Polymorphism -- differ fxn name , But same parameters
+//Funtion Runtime -- Same Funtion name , SAme parameters , But different class
+//uses a virtual keyword in the base class.
+//acheiving this through the concept of inheritance.
+
+
+
+// Types of Polymorphism -- 2.1
+// Funtion overloading
+
+class Calculate{
+  
+    
+  int x ,y,z;
+public:  
+
+Calculate(int a,int b,int c){
+    x=a;
+    y=b;
+    z=c;
+}
+    void Multiple(int a , int b ,int c){
+        cout<<"the solution is "<<a*b*c<<endl;
+        
+    }
+
+    void Multiple(double a , double b ,double c){
+      cout<<"the double Multi solution "<<a*b*c;
+    }
+};
+
+int main(){
+    Calculate obj1(2,2,2);
+    obj1.Multiple(2,3,4);
+    obj1.Multiple(2.1,3.2,4.2);
+}
+
+
+
+
+
+
+
+//types of Polymorphism -- 2.1
+// Funtion Overriding
+//Function overriding -- means redefining a parent class function in the child class with the same name and same arguments.
+
+class Animal{
+ public:
+ virtual void sound(){
+     cout<<"Animal makes sound";
+ }
+};
+
+class Dog : public Animal{
+public:
+    void sound() override {
+        cout<<"Dog makes a sound"<<endl;
+    }
+};
+
+class Cat : public Animal{
+public:
+    void sound() override {
+        cout <<"Cat makes a sound";
+    }
+    
+};
+int main(){
+    Dog d;
+    Cat c;
+    d.sound();
+    c.sound();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
