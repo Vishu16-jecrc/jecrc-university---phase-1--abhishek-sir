@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int TotalPos(int n){
+
+    // Base Cases
+    if(n < 4){
+        return 1;
+    }
+
+    if(n == 4){
+        return 2;
+    }
+
+    // Recursive Relation
+    return TotalPos(n-1) + TotalPos(n-4);
+}
+
+int main(){
+
+    int n = 6;
+
+    cout << "Total Possibilities = " << TotalPos(n);
+
+    return 0;
+}
